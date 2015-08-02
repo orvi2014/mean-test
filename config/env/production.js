@@ -2,6 +2,11 @@
 
 module.exports = {
 	db: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/test',
+	
+	  http: {
+	        port: process.env.OPENSHIFT_NODEJS_PORT,
+	  },
+	  hostname: process.env.OPENSHIFT_NODEJS_IP,
 	assets: {
 		lib: {
 			css: [
