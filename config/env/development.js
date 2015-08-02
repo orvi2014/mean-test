@@ -2,6 +2,10 @@
 
 module.exports = {
 	db: 'mongodb://localhost/test-dev',
+	http: {
+	port: process.env.OPENSHIFT_NODEJS_PORT,
+  	},
+  	hostname: process.env.OPENSHIFT_NODEJS_IP,
 	app: {
 		title: 'test - Development Environment'
 	},
