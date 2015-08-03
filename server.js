@@ -29,18 +29,18 @@ var app = require('./config/express')(db);
 require('./config/passport')();
 
 //openshift port or local port
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+//var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+//var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
  
-app.listen(server_port, server_ip_address, function () {
-  console.log( "Listening on " + server_ip_address + ", server_port " + port )
-});
+//app.listen(server_port, server_ip_address, function () {
+//  console.log( "Listening on " + server_ip_address + ", server_port " + port )
+//});
 
 // Start the app by listening on <port>
-//app.listen(config.port);
+app.listen(config.port);
 
 // Expose app
-//exports = module.exports = app;
+exports = module.exports = app;
 
 // Logging initialization
-//console.log('MEAN.JS application started on port ' + config.port);
+console.log('MEAN.JS application started on port ' + config.port);
